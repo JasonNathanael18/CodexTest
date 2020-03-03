@@ -27,27 +27,6 @@ class MainPresenter(private var MainView: MainContract.View) : MainContract.Pres
         fetchStoryDetail(listTop)
     }
 
-//    private suspend fun fetchStoryDetail(listTop: ArrayList<Int>) {
-//        val job = GlobalScope.launch(Dispatchers.IO) {
-//            for (i in 0 until 10) {
-//                val postRequest = RetrofitService().api().getStory(listTop[i].toString())
-//                val response = postRequest.await()
-//                if (response.isSuccessful) {
-//                    println("gagal")
-//                    topStoryList.add(response.body() as StoryResponse)
-//                } else {
-//                    println("gagal")
-//                }
-//            }
-//        }
-//        job.join()
-//        if (job.isCompleted) {
-//            GlobalScope.launch(Dispatchers.Main) {
-//                MainView.setListData(topStoryList)
-//            }
-//        }
-//    }
-
     private suspend fun fetchStoryDetail(listTop: ArrayList<Int>) {
         for (i in 0 until 10) {
             GlobalScope.async {
