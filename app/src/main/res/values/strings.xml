@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CodexGithubTest</string>
+    <string name="score">Score is %s</string>
+    <string name="comment">Total comment is %s</string>
+    <string name="actionbar_detail_title">Story Detail</string>
+    <string name="by">By %s</string>
+    <string name="actionbar_main_title">Top Stories</string>
+</resources>
